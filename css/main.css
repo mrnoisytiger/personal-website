@@ -70,7 +70,7 @@
       cursor: pointer; }
       #splash #splash-buttons p:hover {
         transition: 0.2s;
-        background-color: rgba(0, 0, 0, 0.4); }
+        background-color: rgba(0, 0, 0, 0.8); }
       @media screen and (min-width: 320px) and (max-width: 667px) {
         #splash #splash-buttons p {
           margin: 0px 40px 25px; } }
