@@ -1,0 +1,98 @@
+#splash {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/splash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover; 
+
+    #splash-img {
+        img {
+            width: 100%;
+            height: auto;
+            /*
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);*/
+        }
+    }
+    #splash-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        //background-color: rgba(0,0,0,0.3);
+    }
+
+    #splash-text {
+        padding: 0px;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+
+        p {
+            position: relative;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 3.4em;
+            font-weight: 700;
+            background-color: rgba(0,0,0,0.25);
+            color: #FFFFFF;
+            //border: 4px solid white;
+            border-radius: 2px;
+            padding: 15px 35px;
+            width: 300px;
+            max-width: 75%;
+            text-align: center;
+
+            @media  screen 
+                and (min-width: 320px) 
+                and (max-width: 480px) {
+                    top: 52%;
+                    font-size: 2.5em;
+                    width: 175px;
+                    padding: 8px 20px;
+            }
+        }
+    }
+
+    #splash-buttons {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @if $debug {
+            border: 2px solid pink;
+        }
+
+        p {
+            display: inline-block;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 1.2em;
+            font-weight: 400;
+            background-color: rgba(0,0,0,0.6);
+            color: #FFFFFF;
+            border: 4px solid white;
+            border-radius: 2px;
+            padding: 15px 35px;
+            margin: 0px 40px;
+        }
+    }
+
+    #splash-scroll-icon {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        i {
+            color: rgba(0,0,0,0.8);
+            font-size: 50px;
+        }
+    }
+}

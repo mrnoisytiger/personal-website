@@ -1,0 +1,18 @@
+$debug: false !default;
+$blueblack: rgb(2, 3, 12);
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin:400,700');
+@import 'splash.scss';
+@import 'about.scss';
+
+html,body {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+p {
+    padding: 0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+
+}

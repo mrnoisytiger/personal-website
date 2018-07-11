@@ -1,0 +1,23 @@
+#about {
+    width: 100%;
+    height: auto;
+
+    background-color: $blueblack;
+
+    p {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1em;
+        line-height: 2.2em;
+        color: white;
+        width: 70%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @if $debug {
+            border: 2px solid pink;
+        }
+    }
+}
