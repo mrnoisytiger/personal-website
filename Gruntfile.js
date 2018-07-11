@@ -49,12 +49,13 @@ module.exports = function(grunt) {
             }
         },
 
-        // Minify JS in staging directory and put into public directory
+        // Minify JS in staging directory and put into public directory. Minify 3rd party JS and put into public
         uglify: {
             production: {
-                files: {
-                    'public/min/script.js': 'js/script.js',
-                }
+                files: [
+                    {src: ['js/script.js'], dest: 'public/min/script.js'},
+                    {src: ['bin/nanogallery2/*.js'], dest: 'bin/min/nanogallery2.js'},
+                ],
             }
         },
 
@@ -129,6 +130,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-image');
 
-    grunt.registerTask('develop', ['sass','concat']);
-    grunt.registerTask('production', ['sass','autoprefixer','cssmin','concat','uglify','processhtml','htmlmin','imagemin']);
+    grunt.registerTask('develop', ['sass:develop','concat:develop']);
+    grunt.registerTask('production', ['sass:production','autoprefixer','cssmin','concat:production','uglify','processhtml','htmlmin','imagemin']);
 };
