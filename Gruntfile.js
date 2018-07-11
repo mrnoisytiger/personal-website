@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
         concat: {
             develop: {
-                src: ['js/*.js','!js/script.js'],
+                src: ['js/velocity.min.js','js/*.js','!js/script.js'],
                 dest: 'js/script.js',
             }
         }
