@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
 
     <!-- User CSS -->
+    <!-- build:css:production /min/main.css-->
     <link rel="stylesheet" href="/css/main.css">
+    <!-- /build -->
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">  
@@ -20,8 +22,12 @@
     <script type="text/javascript" src="https://unpkg.com/nanogallery2@2.2.0/dist/jquery.nanogallery2.data_flickr.min.js"></script>
 
     <!-- User Scripts -->
+    <!-- build:js:production /min/script.js -->
     <script src="/js/script.js"></script>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <!-- /build -->
+
+    <!-- Meta Tags for Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Facebook Meta -->
     <meta property="og:title" content="Felix Jen" />
@@ -61,34 +67,34 @@
 
 <!-- Pictures -->
 <div id="pictures">
-        <div data-nanogallery2='{
-            "userID": "155448172@N06",
-            "kind": "flickr",
-            "photoset": "72157695775077002",
-            "thumbnailWidth": "auto",
-            "thumbnailHeight": "250",
-            "thumbnailBorderVertical": 3,
-            "thumbnailBorderHorizontal": 3,
-            "colorScheme": {
-              "thumbnail": {
-                "background": "rgba(2,3,12,1)"
-              }
-            },
-            "thumbnailDisplayTransitionDuration": 400,
-            "thumbnailLabel": {
-              "display": false
-            },
-            "thumbnailHoverEffect2": "toolsAppear|imageScaleIn80",
-            "galleryDisplayMode": "moreButton",
-            "galleryDisplayMoreStep": 5,
-            "thumbnailAlignment": "center",
-            "thumbnailGutterWidth": 4,
-            "thumbnailGutterHeight": 4,
-            "gallerySorting": "titleasc"
-        }' id="picture-gallary">
-    
-        </div>
-        
+    <h1>Pictures</h1>
+    <div data-nanogallery2='{
+        "userID": "155448172@N06",
+        "kind": "flickr",
+        "photoset": "72157695775077002",
+        "thumbnailWidth": "auto",
+        "thumbnailHeight": "250",
+        "thumbnailBorderVertical": 3,
+        "thumbnailBorderHorizontal": 3,
+        "colorScheme": {
+            "thumbnail": {
+            "background": "rgba(2,3,12,1)"
+            }
+        },
+        "thumbnailDisplayTransitionDuration": 400,
+        "thumbnailLabel": {
+            "display": false
+        },
+        "thumbnailHoverEffect2": "toolsAppear|imageScaleIn80",
+        "galleryDisplayMode": "moreButton",
+        "galleryDisplayMoreStep": 5,
+        "thumbnailAlignment": "center",
+        "thumbnailGutterWidth": 4,
+        "thumbnailGutterHeight": 4,
+        "gallerySorting": "titleasc"
+    }' id="picture-gallary">
+
+    </div>
 </div>
 <br>
 <!-- Videos -->
@@ -120,4 +126,10 @@
             </div>
      </form>
 </div>
+
+<!-- Footer -->
+<footer>
+    <p>Felix Jen, 2018</p>
+</footer>
+
 </body>
