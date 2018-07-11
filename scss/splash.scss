@@ -1,6 +1,7 @@
 #splash {
+    position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url("/images/splash.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -52,7 +53,6 @@
             @media  screen 
                 and (min-width: 320px) 
                 and (max-width: 480px) {
-                    top: 52%;
                     font-size: 2.5em;
                     width: 175px;
                     padding: 8px 20px;
@@ -66,10 +66,6 @@
         left: 50%;
         transform: translateX(-50%);
 
-        @if $debug {
-            border: 2px solid pink;
-        }
-
         p {
             display: inline-block;
             font-family: 'Libre Franklin', sans-serif;
@@ -81,6 +77,13 @@
             border-radius: 2px;
             padding: 15px 35px;
             margin: 0px 40px;
+
+            @media  screen 
+            and (min-width: 320px) 
+            and (max-width: 480px) {
+                top: -10px;
+                margin: 0px 40px 15px;
+            }
         }
     }
 
