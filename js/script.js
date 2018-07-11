@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     $('#splash-scroll-icon').click(function() {
         $('body').animate({

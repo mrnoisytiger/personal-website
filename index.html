@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <head>
     <title>Felix Jen</title>
+
+    <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
+
+    <!-- User CSS -->
     <link rel="stylesheet" href="/css/main.css">
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">  
+
+    <!-- JQuery -->
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+
+    <!-- NanoGallery -->
+    <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/nanogallery2@2.2.0/dist/jquery.nanogallery2.data_flickr.min.js"></script>
+
+    <!-- User Scripts -->
     <script src="/js/script.js"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
 
@@ -46,7 +61,33 @@
 
 <!-- Pictures -->
 <div id="pictures">
-
+        <div data-nanogallery2='{
+            "userID": "155448172@N06",
+            "kind": "flickr",
+            "photoset": "72157695772879742",
+            "thumbnailWidth": "auto",
+            "thumbnailHeight": "250",
+            "thumbnailBorderVertical": 3,
+            "thumbnailBorderHorizontal": 3,
+            "colorScheme": {
+              "thumbnail": {
+                "background": "rgba(2,3,12,1)"
+              }
+            },
+            "thumbnailDisplayTransitionDuration": 400,
+            "thumbnailLabel": {
+              "display": false
+            },
+            "thumbnailHoverEffect2": "toolsAppear|imageScaleIn80",
+            "galleryDisplayMode": "moreButton",
+            "galleryDisplayMoreStep": 5,
+            "thumbnailAlignment": "center",
+            "thumbnailGutterWidth": 4,
+            "thumbnailGutterHeight": 4
+        }' id="picture-gallary">
+    
+        </div>
+        
 </div>
 
 <!-- Videos -->

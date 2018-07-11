@@ -1,0 +1,24 @@
+#pictures {
+    padding-bottom: 30px;
+    
+    .ngy2_container {
+        background-color: $blueblack;
+        margin: 0px 8%;
+    }
+
+}
+
+.nGY2ViewerMedia {
+    width: 50% !important;
+    min-width: 400px;
+    max-width: 100%;
+    height: auto !important;
+}
+
+.toolbarContainer {
+    display: none !important;
+}
+
+.nGY2ViewerToolsTopRight .ngy2viewerToolAction:not(.closeButton) {
+    display: none !important;
+}
