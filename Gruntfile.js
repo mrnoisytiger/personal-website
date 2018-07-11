@@ -6,10 +6,18 @@ module.exports = function(grunt) {
                     'css/main.css': 'scss/main.scss',
                 }
             }
+        },
+
+        concat: {
+            develop: {
+                src: ['js/*.js','!js/script.js'],
+                dest: 'js/script.js',
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('develop', ['sass']);
+    grunt.registerTask('develop', ['sass','concat']);
 };

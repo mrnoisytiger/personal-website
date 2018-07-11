@@ -66,7 +66,8 @@
     position: absolute;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    cursor: pointer; }
     #splash #splash-scroll-icon i {
       color: rgba(0, 0, 0, 0.8);
       font-size: 50px; }
