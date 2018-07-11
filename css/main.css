@@ -41,7 +41,7 @@
       width: 300px;
       max-width: 75%;
       text-align: center; }
-      @media screen and (min-width: 320px) and (max-width: 480px) {
+      @media screen and (min-width: 320px) and (max-width: 667px) {
         #splash #splash-text p {
           font-size: 2.5em;
           width: 175px;
@@ -50,7 +50,12 @@
     position: absolute;
     top: 60%;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center; }
+    @media screen and (min-width: 320px) and (max-width: 667px) {
+      #splash #splash-buttons {
+        top: 55%; } }
     #splash #splash-buttons p {
       display: inline-block;
       font-family: 'Libre Franklin', sans-serif;
@@ -62,16 +67,18 @@
       border-radius: 2px;
       padding: 15px 35px;
       margin: 0px 40px; }
-      @media screen and (min-width: 320px) and (max-width: 480px) {
+      @media screen and (min-width: 320px) and (max-width: 667px) {
         #splash #splash-buttons p {
-          top: -10px;
-          margin: 0px 40px 15px; } }
+          margin: 0px 40px 25px; } }
   #splash #splash-scroll-icon {
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer; }
+    @media screen and (min-width: 320px) and (max-width: 667px) {
+      #splash #splash-scroll-icon {
+        bottom: 20px; } }
     #splash #splash-scroll-icon i {
       color: rgba(0, 0, 0, 0.8);
       font-size: 50px; }

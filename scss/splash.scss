@@ -65,10 +65,13 @@
         top: 60%;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
 
         @media  screen 
             and (min-width: 320px) 
-            and (max-width: 667px) {
+            and (max-width: 667px) 
+            and (orientation: portrait) {
                 top: 55%;
         }
 
