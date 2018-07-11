@@ -6,7 +6,7 @@ function anitwo(){
     document.getElementById('bg').className ='animation2';
 }
 
-function submit() {
+function AJAXsubmit() {
     $("#contact-form").submit(function(e) {
         e.preventDefault();
         var $form = $(this);
