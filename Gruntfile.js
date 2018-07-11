@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             production: {
                 files: [
                     {src: ['js/script.js'], dest: 'public/min/script.js'},
-                    {src: ['bin/nanogallery2/*.js'], dest: 'bin/min/nanogallery2.js'},
+                    {src: ['bin/nanogallery2/*.js'], dest: 'public/bin/min/nanogallery2.js'},
                 ],
             }
         },
