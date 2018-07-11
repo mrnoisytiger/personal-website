@@ -11,10 +11,11 @@ function AJAXsubmit() {
         e.preventDefault();
         var $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
-            anitwo();
-            $("#contact-form label").each(function() {
-                $(this).innerHTML("");
-            });
+
         });
+        $("#contact-form label").each(function() {
+            $(this).innerHTML("");
+        });
+        alert("Done");
       });
 }
