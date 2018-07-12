@@ -161,6 +161,8 @@
       #videos #videos-flex .video-box {
         min-width: 98.4%;
         height: 200px; } }
+    #videos #videos-flex .video-box:hover {
+      filter: blur(5px); }
     #videos #videos-flex .video-box .video-box-overlay {
       width: 100%;
       height: 100%;
