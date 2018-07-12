@@ -30,9 +30,7 @@
       position: relative;
       top: 45%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       font-family: 'Libre Franklin', sans-serif;
       font-size: 3.4em;
       font-weight: 700;
@@ -52,9 +50,7 @@
     position: absolute;
     top: 60%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     width: 100%;
     text-align: center; }
     @media screen and (min-width: 320px) and (max-width: 667px) and (orientation: portrait) {
@@ -82,9 +78,7 @@
     position: absolute;
     bottom: 30px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     cursor: pointer; }
     @media screen and (min-width: 320px) and (max-width: 667px) {
       #splash #splash-scroll-icon {
@@ -103,16 +97,14 @@
   #about p {
     position: relative;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     font-family: 'Libre Baskerville', serif;
     font-size: 1em;
     line-height: 2.2em;
     color: white;
     width: 70%;
-    padding-top: 60px;
-    padding-bottom: 60px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
 
 #pictures {
   padding-bottom: 30px; }
@@ -151,9 +143,7 @@
   width: 84%;
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   cursor: pointer; }
   #videos #videos-flex .video-box {
     margin: 0px 0.8% 40px 0.8%;
@@ -186,9 +176,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         margin: auto;
         width: 90%;
         transition: 0.2s; }
@@ -206,9 +194,7 @@
   width: 60%;
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%); }
+  transform: translateX(-50%); }
   #contact form label {
     display: block;
     color: white;
@@ -250,6 +236,8 @@
     font-weight: 300;
     outline: none;
     position: absolute;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
     transition: all 0.3s;
     top: 0;
     bottom: 0;
@@ -266,6 +254,8 @@
     content: '';
     position: absolute;
     z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
     transition: all 0.3s; }
   #contact form .bg {
     height: 32px;
@@ -281,8 +271,13 @@
     border-radius: 50%; }
   #contact form .animation {
     -webkit-transform: translate(100px, -100px);
+    -moz-transform: translate(100px, -100px);
+    -o-transform: translate(100px, -100px);
     -ms-transform: translate(100px, -100px);
     transform: translate(100px, -100px);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     transition: all 0.3s linear; }
   #contact form .animation2 {
     -webkit-animation: fadeIn 0.4s ease-out;
@@ -293,14 +288,10 @@
     -moz-animation-iteration-count: 1;
     -moz-animation-fill-mode: forwards;
     -moz-animation-delay: 0.4s;
-    -webkit-animation: fadeIn 0.4s ease-out;
-            animation: fadeIn 0.4s ease-out;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s; }
+    animation: fadeIn 0.4s ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s; }
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -324,6 +315,8 @@
     font-weight: 300;
     outline: none;
     position: absolute;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
     transition: all 0.3s;
     top: 0;
     bottom: 0;
@@ -349,9 +342,7 @@ footer {
     text-align: center;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    transform: translateY(-50%); }
 
 html, body {
   margin-top: 0px;
@@ -364,3 +355,5 @@ p {
   padding: 0px;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em; }
+
+/*# sourceMappingURL=main.css.map */
