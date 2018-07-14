@@ -6,12 +6,12 @@ var videos = [
         link: "https://www.youtube.com/watch?v=sLHh0BvIpB8",
     },
     {
-        title: "Liszt La Campanella (Age 16)",
-        link: "https://www.youtube.com/watch?v=05i6BNDrw9k",
-    },
-    {
         title: "Rachmaninoff Prelude op 32. No. 5 and Moment Musicaux op. 16. No. 4 (Age 15)",
         link: "https://www.youtube.com/watch?v=C2NQ1aTGsIo",
+    },
+    {
+        title: "Liszt La Campanella (Age 16)",
+        link: "https://www.youtube.com/watch?v=05i6BNDrw9k",
     },
     {
         title: "Liszt La Campanella (Age 16)",
