@@ -18,10 +18,6 @@ var videos = [
         link: "https://www.youtube.com/watch?v=e2ah_JGvn-Y",
     },
     {
-        title: "Chopin Etude Op. 25 No. 11 \"Winter Wind\" (Age 16)",
-        link: "https://www.youtube.com/watch?v=qRzPU8cy2Sc",
-    },
-    {
         title: "Chopin Grande Polonaise Op.22 (Age 16)",
         link: "https://www.youtube.com/watch?v=vy8URJ8hHyU",
     },
@@ -40,6 +36,10 @@ var videos = [
     {
         title: "Beethoven Sonata Op. 57 No. 23 Appassionata 1st mvt. (Age 16)",
         link: "https://www.youtube.com/watch?v=G_DH18TYCL8",
+    },
+    {
+        title: "Chopin Etude Op. 25 No. 11 \"Winter Wind\" (Age 16)",
+        link: "https://www.youtube.com/watch?v=qRzPU8cy2Sc",
     },
     {
         title: "Stravinsky Petrouchka and Liszt La Campanella Excerpted from Solo Recital 2nd Half (Age 16)",
