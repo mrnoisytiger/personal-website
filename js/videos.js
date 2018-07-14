@@ -112,6 +112,6 @@ $('.video-box').each(function() {
 });
 
 $('.video-box-overlay').click(function() {
-    window.open($(this).find("a").attr("href"));
+    window.open($(this).find("a").attr("href"), '_blank');
 })
 });
