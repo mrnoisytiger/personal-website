@@ -86,10 +86,11 @@ var videos = [
         title: "Chopin Etude Op.25 No.11, Winter Wind (Age 11)",
         link: "https://www.youtube.com/watch?v=4RrROFjmYpk",
     },
+    /*
     {
         title: "Chopin - Fantasia Impromptu Op.66 (Age 10)",
         link: "https://www.youtube.com/watch?v=O2oMm6E9aHk",
-    } 
+    } */
 ];
 
 for (var key = 0; key < videos.length; key++) {
