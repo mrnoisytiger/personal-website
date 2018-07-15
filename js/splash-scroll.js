@@ -1,18 +1,18 @@
 $(document).ready(function() {
     $('#splash-scroll-icon').click(function() {
-        $('body').velocity({
+        $('body').animate({
             scrollTop: ($('#about').offset().top)
-        },500,[0.16,0.43,0.74,0.49]);
+        },500);
     });
 
     $('#splash-scroll-pictures').click(function() {
-        $('body').velocity({
+        $('body').animate({
             scrollTop: ($('#pictures').offset().top - 100)
         },500);
     });
 
     $('#splash-scroll-videos').click(function() {
-        $('body').velocity({
+        $('body').animate({
             scrollTop: ($('#videos').offset().top - 100)
         },500);
     });

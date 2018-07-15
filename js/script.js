@@ -13,19 +13,19 @@ function ani(){
 
 $(document).ready(function() {
     $('#splash-scroll-icon').click(function() {
-        $('body').velocity({
+        $('body').animate({
             scrollTop: ($('#about').offset().top)
-        },500,[0.16,0.43,0.74,0.49]);
+        },500);
     });
 
     $('#splash-scroll-pictures').click(function() {
-        $('body').velocity({
+        $('body').animate({
             scrollTop: ($('#pictures').offset().top - 100)
         },500);
     });
 
     $('#splash-scroll-videos').click(function() {
-        $('body').velocity({
+        $('body').animate({
             scrollTop: ($('#videos').offset().top - 100)
         },500);
     });
@@ -38,20 +38,16 @@ var videos = [
         link: "https://www.youtube.com/watch?v=sLHh0BvIpB8",
     },
     {
-        title: "Liszt La Campanella (Age 16)",
-        link: "https://www.youtube.com/watch?v=05i6BNDrw9k",
-    },
-    {
         title: "Rachmaninoff Prelude op 32. No. 5 and Moment Musicaux op. 16. No. 4 (Age 15)",
         link: "https://www.youtube.com/watch?v=C2NQ1aTGsIo",
     },
     {
         title: "Liszt La Campanella (Age 16)",
-        link: "https://www.youtube.com/watch?v=e2ah_JGvn-Y",
+        link: "https://www.youtube.com/watch?v=05i6BNDrw9k",
     },
     {
-        title: "Chopin Etude Op. 25 No. 11 \"Winter Wind\" (Age 16)",
-        link: "https://www.youtube.com/watch?v=qRzPU8cy2Sc",
+        title: "Liszt La Campanella (Age 16)",
+        link: "https://www.youtube.com/watch?v=e2ah_JGvn-Y",
     },
     {
         title: "Chopin Grande Polonaise Op.22 (Age 16)",
@@ -72,6 +68,10 @@ var videos = [
     {
         title: "Beethoven Sonata Op. 57 No. 23 Appassionata 1st mvt. (Age 16)",
         link: "https://www.youtube.com/watch?v=G_DH18TYCL8",
+    },
+    {
+        title: "Chopin Etude Op. 25 No. 11 \"Winter Wind\" (Age 16)",
+        link: "https://www.youtube.com/watch?v=qRzPU8cy2Sc",
     },
     {
         title: "Stravinsky Petrouchka and Liszt La Campanella Excerpted from Solo Recital 2nd Half (Age 16)",
@@ -137,13 +137,13 @@ for (var key = 0; key < videos.length; key++) {
 
 $('.video-box').each(function() {
     var append_overlay_text = '<div class=\"video-box-overlay\"></div>';
-    var append_link = '<a href=\'' + $(this).data("video-link") + '\'>' + $(this).data("video-title") + 
+    var append_link = '<a onclick=\"return false;\" href=\'' + $(this).data("video-link") + '\'>' + $(this).data("video-title") + 
     '</a>';
     $(this).append(append_overlay_text);
     $(this).find("div").append(append_link);
 });
 
-$('.video-box-overlay').click(function() {
-    window.open($(this).find("a").attr("href"));
-})
+$('.video-box-overlay').off('click').click(function() {
+    window.open($(this).find("a").attr("href"), '_blank');
+});
 });

@@ -105,13 +105,13 @@ for (var key = 0; key < videos.length; key++) {
 
 $('.video-box').each(function() {
     var append_overlay_text = '<div class=\"video-box-overlay\"></div>';
-    var append_link = '<a href=\'' + $(this).data("video-link") + '\'>' + $(this).data("video-title") + 
+    var append_link = '<a onclick=\"return false;\" href=\'' + $(this).data("video-link") + '\'>' + $(this).data("video-title") + 
     '</a>';
     $(this).append(append_overlay_text);
     $(this).find("div").append(append_link);
 });
 
-$('.video-box-overlay').click(function() {
+$('.video-box-overlay').off('click').click(function() {
     window.open($(this).find("a").attr("href"), '_blank');
-})
+});
 });
