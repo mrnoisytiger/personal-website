@@ -1,0 +1,136 @@
+#cloud-config
+
+### REMEMBER TO CHANGE HOSTNAME AND NETWORKING
+
+# Configure the Hostname
+hostname: "<CHANGE HOSTNAME>"
+
+# Set packages
+package_update: true
+package_upgrade: true
+
+packages:
+  - nmap
+  - htop
+  - build-essential
+
+# Set users
+users: 
+  - 
+    groups: sudo
+    name: fjen
+    shell: /bin/bash
+    chpasswd: {expire: True}
+    ssh_pwauth: True
+    ssh-authorized-keys: 
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWrrVMjI8WQnS1tpasHGJZ+Kk8kwJKqoCBgREDf0qPVe2n2C1RHf5EKmG6j8tm84RfB52OX18XH8037C932KMZGxtui6nENc7nUB9DcrlT0A21PeN82px1YT4wThwnD6pj04vtkSioZ62BZnZUZMXWZrg/rshso5W1vJfVO/x+KdfBdLR8GBK9hWBrsUq/Aj7teCouqcbxZSiYBL8V1njpq12v/PrtwIXtrp3sZehZbKqPKXbOClQzYDD00HtBXZr4XN1VC8i3s4SLnMarmWdDLo9TS9KbAW6DR9kX3z/khcuS08D+fUeR0ytozBrjumAgAv3bByvVfnaUB9wlXSxT felixjen@s-128-97-50-25.resnet.ucla.edu"
+    sudo: 
+      - "ALL=(ALL) NOPASSWD:ALL"
+
+write_files: 
+  - 
+    content: |
+        Port 22
+        Protocol 2
+        HostKey /etc/ssh/ssh_host_rsa_key
+        HostKey /etc/ssh/ssh_host_dsa_key
+        HostKey /etc/ssh/ssh_host_ecdsa_key
+        HostKey /etc/ssh/ssh_host_ed25519_key
+        UsePrivilegeSeparation yes
+        KeyRegenerationInterval 3600
+        ServerKeyBits 1024
+        SyslogFacility AUTH
+        LogLevel INFO
+        LoginGraceTime 120
+        PermitRootLogin without-password
+        StrictModes yes
+        RSAAuthentication yes
+        PubkeyAuthentication yes
+        IgnoreRhosts yes
+        RhostsRSAAuthentication no
+        HostbasedAuthentication no
+        PermitEmptyPasswords no
+        ChallengeResponseAuthentication no
+        X11Forwarding yes
+        X11DisplayOffset 10
+        PrintMotd no
+        PrintLastLog yes
+        TCPKeepAlive yes
+        AcceptEnv LANG LC_*
+        Subsystem sftp /usr/lib/openssh/sftp-server
+        UsePAM yes
+        AllowUsers fjen
+    path: /etc/ssh/sshd_config
+  - 
+    content: |
+        auto lo
+        iface lo inet loopback
+        auto eth0
+        iface eth0 inet static
+          address  # IP
+          netmask # NETMASK
+          gateway  # GATEWAY
+          dns-nameservers # DNSSERVERS
+        iface eth0 inet6 auto
+    path: /etc/network/interfaces
+  -
+    content: |
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+      sudo apt-get update
+      sudo apt-get install -y docker-ce
+      sudo usermod -aG docker fjen
+    path: /home/fjen/docker_install.sh
+
+runcmd:
+
+#
+# Firewall
+#
+
+  # Allow common
+  - sudo ufw allow 22,80,443/tcp
+  # - sudo ufw allow <port>   Uncomment to allow additional ports
+
+  # Start firewall
+  - sudo ufw enable
+  - echo "Enabled UFW Firewall"
+
+#
+# Delete default user
+#
+
+  - deluser --remove-home ubuntu
+  - delgroup ubuntu
+  - echo "Deleted Ubuntu user and group"
+
+#
+# Install Docker CE
+#
+  - chmod +x /home/fjen/docker_install.sh
+  - bash /home/fjen/docker_install.sh
+  - rm /home/fjen/docker_install.sh
+
+
+#
+# Make Mountpoint if necessary
+#
+
+  # - mkdir /media/data
+
+# mounts:
+  # - [xvdb, /media/data,"auto","defaults", "0", "0"]
+
+# setup the file system on the device
+# fs_setup:
+  # - label: data
+  #   filesystem: 'ext4'
+  #   device: '/dev/xvdb'
+  #   partition: auto
+
+
+power_state:
+  timeout: 240
+  delay: "+0"
+  message: Rebooting now.
+  mode: reboot
