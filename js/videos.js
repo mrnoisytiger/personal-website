@@ -14,16 +14,16 @@ var videos = [
         link: "https://www.youtube.com/watch?v=05i6BNDrw9k",
     },
     {
+        title: "Chopin Andante Spianato (Age 16)",
+        link: "https://www.youtube.com/watch?v=9CoYR3d30Vk",
+    },
+    {
         title: "Liszt La Campanella (Age 16)",
         link: "https://www.youtube.com/watch?v=e2ah_JGvn-Y",
     },
     {
         title: "Chopin Grande Polonaise Op.22 (Age 16)",
         link: "https://www.youtube.com/watch?v=vy8URJ8hHyU",
-    },
-    {
-        title: "Chopin Andante Spianato (Age 16)",
-        link: "https://www.youtube.com/watch?v=9CoYR3d30Vk",
     },
     {
         title: "Beethoven Sonata Op. 57 No. 23 Appassionata 3rd mvt. (Age 16)",
